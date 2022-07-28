@@ -8,49 +8,31 @@ public class Main {
         // DO NOT USE ARGUMENTS FOR INPUTS
         // E.g. 'Scanner' for input & 'System.out' for output
         Scanner sc = new Scanner(System.in);
-        int n =sc.nextInt();
-        int[] array = new int[n];
+        int n = sc.nextInt();
+        int[] arr = new int[n];
         for(int i=0;i<n;i++)
         {
-            array[i]=sc.nextInt();
+arr[i]= sc.nextInt();
         }
-        maxMin(array);
+   maxMin(arr);
         
     }
-    public static void maxMin(int[] a)
+   public static void maxMin(int[] arr)
     {
-        int max=Integer.MIN_VALUE;
-        int min=Integer.MAX_VALUE;
-        for(int i=0;i<a.length-1;i++)
+        int k = arr.length;
+        int max =Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for(int j=0;j<k; j++)
         {
-            if(a[i]<a[i+1])
-            {
-                if(a[i+1]>max)
-                {
-                max=a[i+1];
-                }
-            }
-            else{
-                if(a[i]>max)
-                max=a[i];
-            }
-            if(a[i]>a[i+1])
-            {
-                if(a[i+1]<min)
-                {
-                min=a[i+1];
-                }
-            }
-            else
-            {
-                if(a[i]<min)
-                min=a[i];
-            }
-            
-           
+           if(max<arr[j])
+           {
+               max=arr[j];
+           }
+           if(min>arr[j])
+           {
+               min=arr[j];
+           }
         }
-        System.out.println(max+" "+min);
-
+        System.out.print(max+" "+min);
     }
-    
 }

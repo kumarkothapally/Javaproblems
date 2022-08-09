@@ -1,4 +1,5 @@
-public class Solution {
+
+Given an integer A, generate a square matrix filled with elements from 1 to A2 in spiral order and return the generated square matrix.public class Solution {
     public int[][] generateMatrix(int A) {
         int n = A;
         int[][] c=new int[A][A];
